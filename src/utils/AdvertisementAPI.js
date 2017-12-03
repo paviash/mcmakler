@@ -4,7 +4,7 @@ const request = require('superagent');
 module.exports = {
   get() {
     request
-      .get('https://cors-anywhere.herokuapp.com/https://api.mcmakler.de/v1/advertisements')
+      .get('https://cors-anywhere.herokuapp.com/https://api.mcmakler.de/v1/advertisements') // To bypass CORS, not an ideal solution
       .set('Accept', 'application/json')
       .end((err, response) => {
         if (response.status === 200) {
