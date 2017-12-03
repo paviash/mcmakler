@@ -68,7 +68,7 @@ const Advertisement = reactCreateClass({
           <p className="ad-price">{price.replace(/,00+$/, ' ')} €</p>
           <p className="ad-space">
             {advertisement.realestateSummary.numberOfRooms} Zimmer | ab{' '}
-            {advertisement.realestateSummary.space} m<sup>2</sup>
+            {Math.floor(advertisement.realestateSummary.space)} m<sup>2</sup>
           </p>
         </div>
       </div>
