@@ -1,7 +1,7 @@
 const AppDispatcher = require('../dispatcher/AppDispatcher');
 const AppConstants = require('../constants/AppConstants');
 const EventEmitter = require('events').EventEmitter;
-const _ = require('underscore');
+const extend = require('extend');
 
 let store = {};
 
@@ -9,7 +9,7 @@ function loadAdvertisementData(data) {
   store = data[0];
 }
 
-const AdvertisementStore = _.extend({}, EventEmitter.prototype, {
+const AdvertisementStore = extend({}, EventEmitter.prototype, {
   getAdvertisement() {
     return store;
   },

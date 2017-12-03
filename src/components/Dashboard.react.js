@@ -20,7 +20,6 @@ const Dashboard = reactCreateClass({
   },
   render() {
     const adData = this.state.advertisements.advertisements;
-    console.log(adData);
     let advertisementListing;
     if (adData) {
       advertisementListing = Object.keys(adData).map(obj => (

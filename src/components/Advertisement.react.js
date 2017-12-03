@@ -1,5 +1,6 @@
 const React = require('react');
 const reactCreateClass = require('create-react-class');
+const formatCurrency = require('format-currency');
 
 const Advertisement = reactCreateClass({
   render() {
@@ -7,7 +8,13 @@ const Advertisement = reactCreateClass({
     let image;
     let imageText;
     let location;
-    console.log(this.props.value);
+    let price;
+    const currenyOpt = {
+      format: '%v',
+      symbol: '€',
+      locale: 'de-DE',
+    };
+
     if (this.props.value.length !== 10) {
       advertisement = this.props.value;
       if (advertisement.advertisementAssets[0]) {
@@ -24,7 +31,10 @@ const Advertisement = reactCreateClass({
       } else if (advertisement.purpose === 1) {
         imageText = 'Kaufen';
       }
-
+      price = formatCurrency(
+        advertisement.advertisementPrice.sellPrice,
+        currenyOpt,
+      );
       if (advertisement.userWishes.visibleAddress === false) {
         location = (
           <p>
@@ -55,12 +65,10 @@ const Advertisement = reactCreateClass({
         <div className="container-text">
           <p className="ad-title">{advertisement.title}</p>
           <p className="ad-sub-text">{location}</p>
-          <p className="ad-price">
-            {advertisement.advertisementPrice.sellPrice}€
-          </p>
+          <p className="ad-price">{price.replace(/,00+$/, ' ')} €</p>
           <p className="ad-space">
             {advertisement.realestateSummary.numberOfRooms} Zimmer | ab{' '}
-            {advertisement.realestateSummary.space} m2
+            {advertisement.realestateSummary.space} m<sup>2</sup>
           </p>
         </div>
       </div>
