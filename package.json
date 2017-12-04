@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "webpack --config webpack.config.js",
-		"dev":
-			"webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+		"dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
 		"start": "webpack-dev-server --hot ",
 		"test": "jest"
 	},
@@ -41,6 +40,7 @@
 		"react": "^16.0.0",
 		"react-dom": "^16.0.0",
 		"react-highlighter": "^0.4.1",
+		"react-loading-animation": "^1.4.0",
 		"react-timestamp": "^4.3.0",
 		"sass-loader": "^6.0.6",
 		"superagent": "^3.8.0",

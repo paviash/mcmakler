@@ -2,6 +2,7 @@ const React = require('react');
 const reactCreateClass = require('create-react-class');
 const AdvertisementStore = require('../stores/AdvertisementStore');
 const Advertisement = require('./Advertisement.react');
+const Loading = require('react-loading-animation');
 
 function getAdvertisements() {
   return {
@@ -25,6 +26,8 @@ const Dashboard = reactCreateClass({
       advertisementListing = Object.keys(adData).map(obj => (
         <Advertisement value={adData[obj]} />
       ));
+    } else {
+      advertisementListing = <Loading />;
     }
     return <div className="page-layout">{advertisementListing}</div>;
   },

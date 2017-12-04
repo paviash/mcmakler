@@ -17,6 +17,7 @@ const Advertisement = reactCreateClass({
 
     if (this.props.value.length !== 10) {
       advertisement = this.props.value;
+      // Using inventory image as the thumbnails are too pixelated
       if (advertisement.advertisementAssets[0]) {
         image =
 					advertisement.advertisementAssets[0].advertisementThumbnails
