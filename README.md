@@ -2,7 +2,6 @@
 
 A single page task to display first 10 advertisements from the mcmakler API.
 Developed using
-
 -- React/Flux
    -- Reusing components, Cleaner code
 
@@ -14,6 +13,8 @@ Developed using
 
 -- yarn
    -- Faster when compared to npm)
+
+![Alt text](/screenshot/mcmakler.png?raw=true "Screenshot")
 
 To run the project:
 
