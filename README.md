@@ -2,6 +2,7 @@
 
 A single page task to display first 10 advertisements from the mcmakler API.
 Developed using
+
 -- React/Flux
    -- Reusing components, Cleaner code
 
@@ -31,3 +32,8 @@ $ yarn dev
 Tests :
 
 $ yarn test
+
+
+Tested on :
+Browsers : Chrome, Firefox and Edge
+OS : Windows
